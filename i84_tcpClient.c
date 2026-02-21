@@ -11,10 +11,8 @@ class Client
         { 
             byte[] buffer = new byte[1024]; 
             int bytesRead = stream.Read(buffer, 0, buffer.Length); 
-            string message = Encoding.UTF8.GetString(buffer, 0, 
-bytesRead); 
-            Console.WriteLine($"Mensaje recibido del servidor: 
-{message}"); 
+            string message = Encoding.UTF8.GetString(buffer, 0, bytesRead); 
+            Console.WriteLine($"Mensaje recibido del servidor: {message}"); 
         } 
     } 
 } 
