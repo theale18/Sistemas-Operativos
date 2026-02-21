@@ -1,14 +1,13 @@
 #include <stdio.h> 
 #include<sys/shm.h> 
 #include<sys/stat.h> 
- 
 #define TAM 1024 
  
 int main() 
 { 
-    int segment_id; // un id del Segmento de Memoria compartida 
-    char *shared_memory; // un puntero a la Memoria Compartida 
-    //obtener un ID del segmento de memoria 
+    int segment_id;         // un id del Segmento de Memoria compartida 
+    char *shared_memory;    // un puntero a la Memoria Compartida 
+                            //obtener un ID del segmento de memoria 
     segment_id = shmget(1981, TAM, 0664|IPC_CREAT); 
      
     if(segment_id == -1) { //si surge algun problema 
